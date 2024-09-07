@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "cd test/linux-aarch64 && docker compose -f docker-compose.yml build --no-cache && docker-compose run test /bin/bash -c \"./install.sh; exec /bin/bash\"",
+			"group": "test",
+			"label": "test: linux-aarch64"
+		},
+		{
+			"type": "shell",
+			"command": "cd test/linux-x86_64 && docker compose -f docker-compose.yml build --no-cache && docker-compose run test /bin/bash -c \"./install.sh; exec /bin/bash\"",
+			"group": "test",
+			"label": "test: linux-x86_64"
+		}
+	]
+}

@@ -1,8 +1,9 @@
 version: '3'
 services:
   test:
+    platform: linux/i386
     build: .
     volumes:
-      - ../../install.sh:/usr/local/bin/install.sh
+      - ../../install.sh:/install.sh
     tty: true
     stdin_open: true

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  test:
+    platform: linux/arm64
+    build: .
+    volumes:
+      - ../../install.sh:/install.sh
+    tty: true
+    stdin_open: true

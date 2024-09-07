@@ -139,22 +139,25 @@ fi
 success "UIX for deno was installed successfully to $Bold_Green$(tildify "$exe")"
 
 # install UIX
-$exe install -f --import-map https://cdn.unyt.org/uix/importmap.json -Aq -n uix https://cdn.unyt.org/uix/run.ts
+$exe install --root "$deno_install" -f --import-map https://cdn.unyt.org/uix/importmap.json -Aq -n uix https://cdn.unyt.org/uix/run.ts
 success "UIX CLI was installed successfully"
 
 # shell detection for persistent installation
 refresh_command=''
+
 tilde_bin_dir=$(tildify "$bin_dir")
 quoted_install_dir=\"${deno_install//\"/\\\"}\"
 if [[ $quoted_install_dir = \"$HOME/* ]]; then
 	quoted_install_dir=${quoted_install_dir/$HOME\//\$HOME/}
 fi
 
+install_env=DENO_INSTALL
+bin_env=\$$install_env/bin
+
 case $(basename "$SHELL") in
 fish)
 	# Install completions, but we don't care if it fails
 	SHELL=fish $exe completions &>/dev/null || :
-
 	commands=(
 		"set --export $install_env $quoted_install_dir"
 		"set --export PATH $bin_env \$PATH"
