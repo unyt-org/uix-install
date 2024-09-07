@@ -16,7 +16,7 @@ $DenoInstall = $env:DENO_INSTALL
 $BinDir = if ($DenoInstall) {
 	"${DenoInstall}\bin"
 } else {
-	"${Home}\.deno\bin"
+	"${Home}\.uix\bin"
 }
 
 $DenoZip = "$BinDir\deno.zip"
