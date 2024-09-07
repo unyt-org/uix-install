@@ -1,0 +1,8 @@
+version: '3'
+services:
+  test:
+    build: .
+    volumes:
+      - ../../install.sh:/usr/local/bin/install.sh
+    tty: true
+    stdin_open: true

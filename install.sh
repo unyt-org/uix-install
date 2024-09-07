@@ -114,6 +114,7 @@ fi
 deno_uri="${LAND}/download/${deno_version}/zipball"
 # FIXME
 deno_uri="https://github.com/denoland/deno/releases/download/v1.46.3/deno-aarch64-apple-darwin.zip"
+deno_uri="https://github.com/denoland/deno/releases/download/v1.46.3/deno-aarch64-unknown-linux-gnu.zip"
 
 rm -f "$exe.zip"
 curl --fail --location --progress-bar --output "$exe.zip" "$deno_uri" ||
@@ -144,7 +145,7 @@ success "UIX CLI was installed successfully"
 # shell detection for persistent installation
 refresh_command=''
 tilde_bin_dir=$(tildify "$bin_dir")
-quoted_install_dir=\"${install_dir//\"/\\\"}\"
+quoted_install_dir=\"${deno_install//\"/\\\"}\"
 if [[ $quoted_install_dir = \"$HOME/* ]]; then
 	quoted_install_dir=${quoted_install_dir/$HOME\//\$HOME/}
 fi
