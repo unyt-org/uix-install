@@ -47,8 +47,8 @@ if (!(";${Path};".ToLower() -like "*;${BinDir};*".ToLower())) {
 }
 
 if (Test-Path $DenoExe) {
-	& $DenoExe install -f --import-map https://cdn.unyt.org/uix/importmap.json -Aq -n uix https://cdn.unyt.org/uix/run.ts
-	Write-Output "UIX was installed successfully to ${DenoExe}"
+	& $DenoExe install -f --root "$BinDir" --import-map https://cdn.unyt.org/uix/importmap.json -Aq -n uix https://cdn.unyt.org/uix/run.ts
+	Write-Output "Deno for UIX was installed successfully to ${DenoExe}"
 	Write-Output "Run 'uix --init' to get started"
 } else {
 	Write-Output "Error: Deno executable not found at $DenoExe"
