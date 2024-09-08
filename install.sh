@@ -111,10 +111,7 @@ if [ ! -d "$bin_dir" ]; then
 fi
 
 # download executable
-deno_uri="${LAND}/download/${deno_version}/zipball"
-# FIXME
-deno_uri="https://github.com/denoland/deno/releases/download/v1.46.3/deno-aarch64-apple-darwin.zip"
-deno_uri="https://github.com/denoland/deno/releases/download/v1.46.3/deno-aarch64-unknown-linux-gnu.zip"
+deno_uri="${LAND}/download/${deno_version}/${target}"
 
 rm -f "$exe.zip"
 curl --fail --location --progress-bar --output "$exe.zip" "$deno_uri" ||
