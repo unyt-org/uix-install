@@ -1,4 +1,5 @@
-FROM alpine
-RUN apk update && apk add bash \
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y \
+	bash \
 	unzip \
 	curl

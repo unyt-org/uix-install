@@ -126,7 +126,7 @@ fi
 rm "$exe.zip"
 
 # give permissions
-if [ -x "$exe" ]; then
+if [ -e "$exe" ]; then
 	chmod +x "$exe" ||
 		error 'Failed to set permissions on deno executable.'
 else
@@ -136,7 +136,7 @@ fi
 success "UIX for deno was installed successfully to $Bold_Green$(tildify "$exe")"
 
 # install UIX
-$exe install --root "$deno_install" -f --import-map https://cdn.unyt.org/uix/importmap.json -Aq -n uix https://cdn.unyt.org/uix/run.ts
+$exe install --global --root "$deno_install" -f --import-map https://cdn.unyt.org/uix/importmap.json -Aq -n uix https://cdn.unyt.org/uix/run.ts
 success "UIX CLI was installed successfully"
 
 # shell detection for persistent installation
