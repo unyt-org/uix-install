@@ -164,7 +164,7 @@ fish)
 	tilde_fish_config=$(tildify "$fish_config")
 	if [[ -w $fish_config ]]; then
 		{
-			echo -e '\n# deno'
+			echo -e "\n# Deno for UIX"
 
 			for command in "${commands[@]}"; do
 				echo "$command"
@@ -193,7 +193,7 @@ fish)
 
 	if [[ -w $zsh_config ]]; then
 		{
-			echo -e '\n# deno'
+			echo -e "\n# Deno for UIX"
 			for command in "${commands[@]}"; do
 				echo "$command"
 			done
@@ -234,7 +234,7 @@ fish)
 		tilde_bash_config=$(tildify "$bash_config")
 		if [[ -w $bash_config ]]; then
 			{
-				echo -e '\n# deno'
+				echo -e "\n# Deno for UIX"
 				for command in "${commands[@]}"; do
 					echo "$command"
 				done
