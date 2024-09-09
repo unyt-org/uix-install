@@ -29,7 +29,7 @@ $Version = if (!$Version) {
 	$Version
 }
 
-$DownloadUrl = "https://dl.unyt.land/download/${Version}/${Target}"
+$DownloadUrl = "https://dl.unyt.land/download/${Version}/deno-${Target}"
 
 if (!(Test-Path $BinDir)) {
 	New-Item $BinDir -ItemType Directory | Out-Null

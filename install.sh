@@ -111,7 +111,7 @@ if [ ! -d "$bin_dir" ]; then
 fi
 
 # download executable
-deno_uri="${LAND}/download/${deno_version}/${target}"
+deno_uri="${LAND}/download/${deno_version}/deno-${target}"
 
 rm -f "$exe.zip"
 curl --fail --location --progress-bar --output "$exe.zip" "$deno_uri" ||
