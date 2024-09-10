@@ -8,7 +8,7 @@
 **With Shell:**
 
 ```sh
-curl -fsSL https://unyt.land/install.sh | sh
+curl -fsSL https://unyt.land/install.sh | bash
 ```
 
 **With PowerShell:**
@@ -22,7 +22,7 @@ irm https://unyt.land/install.ps1 | iex
 **With Shell:**
 
 ```sh
-curl -fsSL https://unyt.land/install.sh | sh -s 1.0.0
+curl -fsSL https://unyt.land/install.sh | bash -s 1.0.0
 ```
 
 **With PowerShell:**
@@ -48,7 +48,7 @@ brew install deno
   **With Shell (`/usr/local`):**
 
   ```sh
-  curl -fsSL https://unyt.land/install.sh | sudo UIX_INSTALL=/usr/local sh
+  curl -fsSL https://unyt.land/install.sh | sudo UIX_INSTALL=/usr/local bash
   ```
 
   **With PowerShell (`C:\Program Files\uix`):**
