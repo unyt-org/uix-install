@@ -36,7 +36,8 @@ if (!(Test-Path $BinDir)) {
 }
 
 curl.exe -Lo $DenoZip $DownloadUrl
-tar.exe xf $DenoZip -C $BinDir
+Expand-Archive $DenoZip -DestinationPath $BinDir
+# tar.exe xf $DenoZip -C $BinDir
 Remove-Item $DenoZip
 
 $User = [System.EnvironmentVariableTarget]::User
