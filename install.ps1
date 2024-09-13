@@ -12,17 +12,12 @@ if ($Args.Length -eq 1) {
 	$Version = $Args.Get(0)
 }
 
-$DenoInstall = $env:DENO_INSTALL
-$BinDir = if ($DenoInstall) {
-	"${DenoInstall}\bin"
-} else {
-	"${Home}\.uix\bin"
-}
-$RootDir = if ($DenoInstall) {
-	"${DenoInstall}"
+$RootDir = if ($env:DENO_INSTALL) {
+	$env:DENO_INSTALL
 } else {
 	"${Home}\.uix"
 }
+$BinDir = "${RootDir}\bin"
 
 $DenoZip = "$BinDir\deno.zip"
 $DenoExe = "$BinDir\deno.exe"
