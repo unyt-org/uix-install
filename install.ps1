@@ -12,8 +12,8 @@ if ($Args.Length -eq 1) {
 	$Version = $Args.Get(0)
 }
 
-$RootDir = if ($env:DENO_INSTALL) {
-	$env:DENO_INSTALL
+$RootDir = if ($env:UIX_INSTALL) {
+	$env:UIX_INSTALL
 } else {
 	"${Home}\.uix"
 }
