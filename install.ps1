@@ -36,7 +36,7 @@ if (!(Test-Path $BinDir)) {
 }
 
 curl.exe -Lo $DenoZip $DownloadUrl
-Expand-Archive $DenoZip -DestinationPath $BinDir
+Expand-Archive $DenoZip -DestinationPath $BinDir -Force
 # tar.exe xf $DenoZip -C $BinDir
 Remove-Item $DenoZip
 
