@@ -22,7 +22,7 @@ irm https://unyt.land/install.ps1 | iex
 **With Shell:**
 
 ```sh
-curl -fsSL https://unyt.land/install.sh | bash -s 1.0.0
+curl -fsSL https://unyt.land/install.sh | bash -s 2.0.0
 ```
 
 **With PowerShell:**
@@ -31,13 +31,6 @@ curl -fsSL https://unyt.land/install.sh | bash -s 1.0.0
 $v="1.0.0"; irm https://unyt.land/install.ps1 | iex
 ```
 
-## Install via Package Manager
-
-**With [Homebrew](https://formulae.brew.sh/formula/deno):**
-
-```sh
-brew install deno
-```
 
 ## Environment Variables
 
