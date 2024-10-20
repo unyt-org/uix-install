@@ -85,7 +85,7 @@ if [[ $target = "darwin-x64" ]]; then
 	# redirect stderr to devnull to avoid error message when not running in Rosetta
 	if [[ $(sysctl -n sysctl.proc_translated 2>/dev/null) = 1 ]]; then
 		target=darwin-aarch64
-		info "Your shell is running in Rosetta 2. Downloading deno for UIX for $target instead."
+		info "Your shell is running in Rosetta 2. Downloading Deno for UIX for $target instead."
 	fi
 fi
 
@@ -133,7 +133,7 @@ else
 	error "Deno executable not found at $exe"
 fi
 
-success "UIX for deno was installed successfully to $Bold_Green$(tildify "$exe")"
+success "Deno for UIX was installed successfully to $Bold_Green$(tildify "$exe")"
 
 # install UIX
 $exe install --global --root "$deno_install" -f --import-map https://cdn.unyt.org/uix/importmap.json -Aq -n uix https://cdn.unyt.org/uix/run.ts
