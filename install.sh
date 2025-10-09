@@ -136,7 +136,7 @@ fi
 success "Deno for UIX was installed successfully to $Bold_Green$(tildify "$exe")!"
 
 # install UIX
-$exe install --global --root "$deno_install" --no-config --no-lock -f --import-map https://cdn.unyt.org/uix/importmap.json -Aq -n uix https://cdn.unyt.org/uix/run.ts
+$exe install --global --root "$deno_install" --no-config --no-lock -f --import-map https://cdn.unyt.org/uix/importmap.json -A -n uix https://cdn.unyt.org/uix/run.ts
 success "UIX CLI was installed successfully"
 
 # shell detection for persistent installation
