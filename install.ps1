@@ -48,7 +48,7 @@ if (!(";${Path};".ToLower() -like "*;${BinDir};*".ToLower())) {
 }
 
 if (Test-Path $DenoExe) {
-    & $DenoExe install -f --global --root "$RootDir" --import-map https://cdn.unyt.org/uix/importmap.json -Aq -n uix https://cdn.unyt.org/uix/run.ts
+    & $DenoExe install -f --global --root "$RootDir" --import-map https://cdn.unyt.org/uix/importmap.json -A -n uix https://cdn.unyt.org/uix/run.ts
     Write-Output "Deno for UIX was installed successfully to ${DenoExe}"
     Write-Output "Run 'uix --init' to get started"
 } else {
